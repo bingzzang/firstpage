@@ -22,6 +22,9 @@
 	width: fit-content;
 	margin: auto;
 }
+#time{
+	margin-bottom: 50px;
+}
 </style>
 </head>
 <body>
@@ -29,20 +32,21 @@
 		<ul class="navbar-nav">
 			<li class="nav-item active"><a class="nav-link" href="#">Active</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
-			</li>
+			<li class="nav-item"><a class="nav-link" href="#">My Page</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Board</a></li>
+<!-- 			<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li> -->
 		</ul>
 	</nav>
 	<div class="jumbotron text-center">
 		<h1>My First Page</h1>
 	</div>
 
+	<div class="text-center" id="time">
+		<p>${serverTime}</p>
+	</div>
 	<div class="col-sm-4" id="wrapper">
 		<div id="btns">
-			<button type="button" class="btn btn-outline-secondary">Sign
-				In</button>
+			<button type="button" class="btn btn-outline-secondary">Sign In</button>
 			<button type="button" class="btn btn-outline-info">Sign Up</button>
 		</div>
 	</div>
