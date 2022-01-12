@@ -26,6 +26,17 @@
 	margin-bottom: 50px;
 }
 </style>
+<script>
+$(document).ready(function(){
+	$("#signUp").click(()=>{
+		location.href="<c:url value='/member/signUp.do'/>";
+	});
+	
+	$("#signIn").click(()=>{
+		location.href="<c:url value='/member/signIn.do'/>";
+	});
+});
+</script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -46,8 +57,8 @@
 	</div>
 	<div class="col-sm-4" id="wrapper">
 		<div id="btns">
-			<button type="button" class="btn btn-outline-secondary">Sign In</button>
-			<button type="button" class="btn btn-outline-info">Sign Up</button>
+			<button type="button" class="btn btn-outline-secondary" id="signIn">Sign In</button>
+			<button type="button" class="btn btn-outline-info" id="signUp">Sign Up</button>
 		</div>
 	</div>
 </body>
