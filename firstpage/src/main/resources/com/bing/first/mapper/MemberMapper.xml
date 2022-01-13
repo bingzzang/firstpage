@@ -6,7 +6,7 @@
 <mapper namespace="com.bing.first.mapper.MemberMapper">
 
 	<insert id="insertMember" parameterType="memberVo">
-		INSERT INTO MPF_MEMBER
+		INSERT INTO MFP_MEMBER
 				   (idx, userid, userpwd, username, birthday, gender, email, phone, point, grade)
 		VALUES (mfp_member_idx.nextval
 				  , #{userId}
@@ -17,7 +17,12 @@
 				  , #{eamil}
 				  , #{phone}
 				  , 0
-				  , 1)
+				  , 0)
 	</insert>
 	
+	<select id="checkId" parameterType="String" resultType="Integer">
+		SELECT count(userid)
+		 FROM mfp_member
+		WHERE userid = #{userId}
+	</select>
 </mapper>
