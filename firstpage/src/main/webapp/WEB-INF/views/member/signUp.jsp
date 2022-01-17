@@ -100,6 +100,22 @@
 			}
 		});
 		
+		$('#checkId').click(function(){
+			
+			$.ajax({
+				type:'post',
+				url : '/member/checkId.do',
+				data : {
+					userId : $('userId').val();
+				},
+				success: function(result){
+					if(result !=0){
+						console.log("중복아님");
+					}
+				}
+			})
+		});
+		
 	});
 </script>
 <style>
@@ -120,11 +136,11 @@
 	<div class="container">
 		<form action="/action_page.php">
 			<div class="form-group">
-				<label for="uname">UserId:</label><br />
+				<label for="userId">UserId:</label><br />
 				<div>
-					<input type="text" class="form-control disin w200" id="uname"
-						placeholder="Enter username" name="uname">
-					<button type="submit" class="btn btn-outline-success btn-sm">Check</button>
+					<input type="text" class="form-control disin w200" id="userId"
+						placeholder="Enter username" name="userId">
+					<button id="checkId" class="btn btn-outline-success btn-sm">Check</button>
 				</div>
 			</div>
 			<div class="form-group">
