@@ -1,13 +1,13 @@
 package com.bing.first.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.bing.first.mapper.MemberMapper;
 import com.bing.first.model.MemberVo;
 import com.bing.first.service.MemberService;
 
-@Repository
+@Service
 public class MemberServiceImpl implements MemberService{
 
 	@Autowired 

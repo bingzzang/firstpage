@@ -1,10 +1,7 @@
 package com.bing.first.service;
 
-import org.springframework.stereotype.Service;
-
 import com.bing.first.model.MemberVo;
 
-@Service
 public interface MemberService {
 
 	//회원 주체
